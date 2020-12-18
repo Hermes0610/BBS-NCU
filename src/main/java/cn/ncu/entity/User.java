@@ -1,10 +1,9 @@
-package cn.nuc.entity;
+package cn.ncu.entity;
 
 public class User {
     private String username;
     private Integer age;
     private String sex;
-
     public User() {
     }
 
