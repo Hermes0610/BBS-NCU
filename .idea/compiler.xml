@@ -2,12 +2,15 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+      <profile name="Annotation profile for ssm" enabled="true">
+        <sourceOutputDir name="out/generated-sources/annotations" />
+        <sourceTestOutputDir name="out/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="BBS-NCU" />
+        <module name="ssm" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ssm" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
