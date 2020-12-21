@@ -7,8 +7,8 @@ import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
-@Table(name = "tiezi")
-public class Tiezi implements Serializable {
+@Table(name = "jiajingzhiding")
+public class Jiajingzhiding implements Serializable {
     @GeneratedValue(generator = "JDBC") // 自增的主键映射
     @Id
     @Column(name = "id",insertable=false)
@@ -18,22 +18,15 @@ public class Tiezi implements Serializable {
     private String bianhao;
     @Column(name = "biaoti")
     private String biaoti;
-    @Column(name = "lanmu")
-    private String lanmu;
-    @Column(name = "tupian")
-    private String tupian;
-    @Column(name = "neirong")
-    private String neirong;
     @Column(name = "faburen")
     private String faburen;
-    @Column(name = "dianjilv")
-    private Integer dianjilv;
-    @Column(name = "huifushu")
-    private Integer huifushu;
     @Column(name = "jiajing")
     private String jiajing;
     @Column(name = "zhiding")
     private String zhiding;
+    @Column(name = "caozuoren")
+    private String caozuoren;
+    private Integer tieziid;
 
     @Column(name = "addtime")
     private String addtime;
@@ -64,46 +57,11 @@ public class Tiezi implements Serializable {
         this.biaoti = biaoti == null ? "" : biaoti.trim();
     }
 
-    public String getLanmu() {
-        return lanmu;
-    }
-    public void setLanmu(String lanmu) {
-        this.lanmu = lanmu == null ? "" : lanmu.trim();
-    }
-
-    public String getTupian() {
-        return tupian;
-    }
-    public void setTupian(String tupian) {
-        this.tupian = tupian == null ? "" : tupian.trim();
-    }
-
-    public String getNeirong() {
-        return neirong;
-    }
-    public void setNeirong(String neirong) {
-        this.neirong = neirong == null ? "" : neirong.trim();
-    }
-
     public String getFaburen() {
         return faburen;
     }
     public void setFaburen(String faburen) {
         this.faburen = faburen == null ? "" : faburen.trim();
-    }
-
-    public Integer getDianjilv() {
-        return dianjilv;
-    }
-    public void setDianjilv(Integer dianjilv) {
-        this.dianjilv = dianjilv == null ? 0 : dianjilv;
-    }
-
-    public Integer getHuifushu() {
-        return huifushu;
-    }
-    public void setHuifushu(Integer huifushu) {
-        this.huifushu = huifushu == null ? 0 : huifushu;
     }
 
     public String getJiajing() {
@@ -118,6 +76,19 @@ public class Tiezi implements Serializable {
     }
     public void setZhiding(String zhiding) {
         this.zhiding = zhiding == null ? "" : zhiding.trim();
+    }
+
+    public String getCaozuoren() {
+        return caozuoren;
+    }
+    public void setCaozuoren(String caozuoren) {
+        this.caozuoren = caozuoren == null ? "" : caozuoren.trim();
+    }
+    public Integer getTieziid() {
+        return tieziid;
+    }
+    public void setTieziid(Integer tieziid) {
+        this.tieziid = tieziid == null ? 0 : tieziid;
     }
 
     public String getAddtime() {
